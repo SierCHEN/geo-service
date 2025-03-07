@@ -44,7 +44,19 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: false
-#  sql:
-#    init:
-#      schema-locations: classpath:db/schema-h2.sql
-#      data-locations: classpath:db/data-h2.sql
+
+logging:
+  level:
+    com:
+      cse:
+        geo:
+          infrastructure:
+            feign:
+              WxLoginFeignClient: debug
+
+url:
+  wx-api: https://api.weixin.qq.com
+
+wx:
+  appid: "wx08e759ccaa34b96b"
+  secret: "3a10b502d33a0b35f4726579838150a2"
